@@ -106,36 +106,7 @@ void setup()
 //********************************* PROGRAMA PRINCIPAL *****************************
 void loop(void) 
 {
-  //Comunicacion Bluetooth ----------------------
-  
-  if(recibeBluetoothData()) //Si se recibio un comando BlueTooth
-  {
-    sendBlueToothData(); 
-  }
-  
-
-if (variable_estado==0)
-{
-distancia_medida();
-if (distancia_centro<50 || distancia_izq<50 || distancia_der<50  )
-   {
-
-  VM2=0;
-  VM1=0;
-  EnviaVelocidad();  
-  }
-else 
-{
-    
-
-if ((distancia_izq<200 && distancia_izq>50 )|| (distancia_der<200 &&distancia_der>50))
-{
-    VM1=distancia_izq*20;
-    VM2=distancia_der*20;
-EnviaVelocidad();  
-}
-}
-
+ 
    
 }
 
